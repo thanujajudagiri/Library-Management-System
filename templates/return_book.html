@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Book</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h2>Return Book</h2>
+
+<form method="POST" class="form-box">
+    <input type="number" name="book_id" placeholder="Book ID" required>
+    <button type="submit">Return</button>
+</form>
+
+<a href="/dashboard">Back</a>
+
+</body>
+</html>
+
