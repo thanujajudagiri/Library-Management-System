@@ -1,1 +1,84 @@
+/* ---------- General Body ---------- */
+body {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+/* ---------- Layout ---------- */
+.dashboard-container {
+    display: flex;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+    width: 220px;
+    background-color: #343a40;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.sidebar h4 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.sidebar a {
+    color: #adb5bd;
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* ---------- Main Content ---------- */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+/* ---------- Top Bar ---------- */
+.topbar {
+    background-color: #ffffff;
+    padding: 15px 25px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------- Logout Button ---------- */
+.logout-btn {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 6px 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* ---------- Dashboard Text ---------- */
+.dashboard-text {
+    margin-top: 30px;
+}
+
+.dashboard-text h2 {
+    margin-bottom: 10px;
+}
+
+.dashboard-text p {
+    color: #6c757d;
+}
