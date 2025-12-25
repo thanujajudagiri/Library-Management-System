@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h2>Search Books</h2>
+
+<form method="POST" class="form-box">
+
+    <select name="search_by" required>
+        <option value="">Search By</option>
+        <option value="title">Book Title</option>
+        <option value="author">Author</option>
+        <option value="department">Department</option>
+    </select>
+
+    <input type="text" name="keyword" placeholder="Enter keyword" required>
+
+    <button type="submit">Search</button>
+</form>
+
+{% if books %}
+<div class="book-container">
+{% for book in books %}
+    <div class="book-card">
+        <img src="{{ url_for('static', filename='images/' + book.image) }}" width="120">
+        <h4>{{ book.title }}</h4>
+        <p>Author: {{ book.author }}</p>
+        <p>Department: {{ book.department }}</p>
+        <p>Quantity: {{ book.quantity }}</p>
+    </div>
+{% endfor %}
+</div>
+{% endif %}
+
+<a href="/dashboard">Back</a>
+
+</body>
+</html>
+
+
+
+

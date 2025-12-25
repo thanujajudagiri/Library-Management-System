@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issued Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Issued Books</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Book Name</th>
+        <th>Issue Date</th>
+        <th>Action</th>
+    </tr>
+
+    {% for book in data %}
+    <tr>
+        <td>{{ book[1] }}</td>
+        <td>{{ book[2] }}</td>
+        <td>
+            <a href="{{ url_for('return_book', book_id=book[0]) }}"
+               class="btn btn-danger btn-sm">
+                Return
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>
