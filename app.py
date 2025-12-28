@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session
 from datetime import date
 
 # Import ONLY db connection (no global cursor)
-from Library_db import db
+from library_db import db
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key_here"
@@ -197,4 +197,5 @@ def logout():
 # ---------------- RUN ----------------
 if __name__ == "__main__":
     app.run(debug=True)
+
 
