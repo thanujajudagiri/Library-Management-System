@@ -174,7 +174,7 @@ def return_book(book_id):
 
     cursor.execute(
         "UPDATE books SET status='Available' WHERE id=%s",
-        (book_id)
+        (book_id,)
     )
     cursor.execute(
         "DELETE FROM issued_books WHERE book_id=%s AND user_id=%s",
@@ -197,6 +197,7 @@ def logout():
 # ---------------- RUN ----------------
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
